@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <title>++ DAMAGE REPORT SKULL ++</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="skull">
+      <img class="skull-img" src="images/skull.png" alt="">
+    </div>
+
+    <div class="banner">
+      <h1>++ DAMAGE REPORT SKULL ++</h1>
+    </div>
+
+    <div class="defense input-form">
+      <label for="armourPoints">Armour Points</label>
+      <input class="armourInput" type="number" name="armourPoints" value="0">
+      <label for="toughBonus">Toughness Bonus</label>
+      <input type="number" name="toughBonus" value="0">
+    </div>
+
+    <div class="attack input-form">
+      <label for="dmgTotal">Total Damage</label>
+      <input class="dmgInput" type="number" name="dmgTotal" value="0">
+      <label for="wpnPen">Weapon Pen</label>
+      <input type="number" name="wpnPen" value="0">
+    </div>
+
+    <div class="vs">
+      <span>VS</span>
+    </div>
+
+    <div class="button">
+      <button class="btn" type="submit">CALCULATE DAMAGE</button>
+    </div>
+
+    <div class="result">
+      <p class="result-text1">You have taken <span>0</span> <span>points</span> of Damage</p>
+    </div>
+
+    <div class="flavour">
+      <p class="result-text2">++ AWAITING USER INPUT ++</p>
+    </div>
+
+  </div>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  font-family: 'Orbitron', sans-serif;
+  display: grid;
+  margin: auto;
+  max-width: 1440px;
+  grid-template-columns: 1.3fr 1.4fr 0.2fr 1.4fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas: "sk bn bn bn"
+    "sk def vs atk"
+    "sk def vs atk"
+    "sk btn btn btn"
+    "sk res res res"
+    "sk fv fv fv"
+}
+
+.skull {
+  grid-area: sk;
+}
+
+.skull-img {
+  max-width: 100%;
+}
+
+.banner {
+  grid-area: bn;
+  text-align: center;
+  color: #32ff6a;
+  font-size: 1.4rem;
+}
+
+.input-form {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-content: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.input-form label {
+  text-align: right;
+}
+
+.input-form input {
+  width: 3rem;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.armourInput {
+  margin-bottom: 10px;
+}
+
+.defense {
+  grid-area: def;
+}
+
+.attack {
+  grid-area: atk;
+}
+
+.dmgInput {
+  margin-bottom: 10px;
+}
+
+.vs {
+  grid-area: vs;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+  color: #32ff6a;
+}
+
+.button {
+  grid-area: btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.result {
+  grid-area: res;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+.result-text1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.result-text2 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flavour {
+  grid-area: fv;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  flex-direction: column;
+  color: #32ff6a;
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 780px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "bn bn bn"
+      "def vs atk"
+      "def vs atk"
+      "btn btn btn"
+      "res res res"
+      "fv fv fv"
+  }
+
+  .skull-img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "bn"
+      "sk"
+      "def"
+      "atk"
+      "btn"
+      "res"
+      "fv"
+  }
+
+  .vs {
+    display: none;
+  }
+
+  .banner {
+    font-size: .8rem;
+  }
+
+  .skull {
+    text-align: center;
+  }
+
+  .skull-img {
+    max-width: 300px;
+  }
+
+  .defense input {
+    margin-right: 58px;
+  }
+
+  .result {
+    font-size: 1.3rem;
+  }
+
+  .flavour {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .attack {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .defense {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.btn {
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  background-color: #d0451b;
+  border-radius: 3px;
+  border: 1px solid #942911;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  background-color: #bc3315;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
